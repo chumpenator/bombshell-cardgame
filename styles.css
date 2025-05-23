@@ -1,0 +1,489 @@
+@font-face {
+    font-family: typewriter-clean;
+    src: url(assets/fonts/typewriter-clean/atwriter.ttf);
+}
+@font-face {
+    font-family: a-typewriter;
+    src: url(assets/fonts/a-typewriter-for-me/ATypewriterForMe.ttf);
+}
+@font-face {
+    font-family: monospace-typewriter;
+    src: url(assets/fonts/monospace-typewriter/MonospaceTypewriter.ttf);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: a-typewriter;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+
+/* ************************************** */
+/*             NAV BAR STYLES             */
+/* ************************************** */
+nav {
+    background-color: #6a3629; /* Briefcase brown */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: monospace-typewriter;
+
+    /* makes static */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+
+    /* bottom border */
+    border-bottom: 2px solid #412117; 
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ************************************** */
+/*                 LOGO                   */
+/* ************************************** */
+nav .logo img {
+    height: 80px;
+    width: auto;
+    max-width: 100%;
+}
+
+
+/* ************************************** */
+/*                NAV MENU                */
+/* ************************************** */
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 2%;
+    padding: 0; /* removes default padding on list elements */
+}
+
+
+/* ************************************** */
+/*             NAV MENU BUTTONS           */
+/* ************************************** */
+nav .nav-links li {
+    margin: 0; /* Adds space between list items */
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #6d4b45;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+nav .nav-links li:hover {
+    background-color: #83534a;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav .nav-links li a {
+    display: block;
+    text-decoration: none;
+    color: #ffca98;
+    border: 1px dashed #ffca98;
+    padding: 15px;
+}
+nav .nav-links li#current { /* highlights the active page */
+    background-color: #83534a;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.9);
+}
+
+
+/* ************************************** */
+/*           SECRET MENU BUTTON           */
+/* ************************************** */
+
+nav .ham-menu { /* Hide secret menu */
+    display: none;
+}
+
+.burger { /* hide button/lines until small screen */
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #f9bb99;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none; /* hide normal menu */
+    }
+    
+    /* Show secret menu button */
+    nav .ham-menu {
+        display: block;
+    }
+
+    /* sets area for secret button */
+    .ham-menu {
+        height: 50px;
+        width: 40px;
+        margin-left: auto;
+        margin-right: 8%;
+        position: relative;
+    }
+    .ham-menu:hover {
+        cursor: pointer;
+    }
+
+    /* Creates secret button lines */
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: #ffca98;
+        border-radius: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+
+    /* Rotates lines when active */
+    .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .ham-menu.active span:nth-child(2) {
+        opacity: 0; /* hides middle */
+    }
+    .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+
+    /* SECRET MENU STYLES */
+    .secret-menu {
+        background-color: #6b423b;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center;
+        text-align: center;
+        font-size: 3rem;
+        transition: .3s ease;
+        z-index: 999;
+    }
+    .secret-menu.active {
+        right: 0;
+        box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.8);
+    }
+
+    .secret-menu ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .secret-menu ul li {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        background-color: #6d4b45;
+        padding: 5px;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+    .secret-menu ul li:hover {
+        background-color: #83534a;
+        box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
+    }
+    .secret-menu li#current {
+        background-color: #83534a;
+        box-shadow: 0 3px 2px rgba(0, 0, 0, 0.9);
+    }
+
+    .secret-menu ul li a {
+        text-decoration: none;
+        color: #f9bb99;
+        display: block;
+        border: 1px dashed #ffca98;
+        padding: 15px;
+        font-size: 40px;
+    }  
+}
+
+
+/* ************************************** */
+/*         GENERAL SECTION STYLES         */
+/* ************************************** */
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    /* Uncomment for fade-in effect ↓ */
+    /* opacity: 0;
+    transition: opacity 1s ease-in-out; */
+}
+
+/* Uncomment for fade-in effect ↓ */
+/* section.visible { opacity: 1; } */
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* may need to adjust to be section/div specific */
+.content img {
+    width: 200px;
+    height: auto;
+    margin: 0 20px;
+}
+
+
+/* ************************************** */
+/*                SECTION 1               */
+/* ************************************** */
+.section1 { background-color: #ede4d9;}
+
+.section1 .content p {
+    margin: 0 auto;
+    padding: 0 100px 0 100px;
+    font-size: 30px;
+    text-align: left;
+}
+
+.section1 .content img {
+    margin: 0 7% 0 0;
+    width: 35%;
+}
+
+
+/* ************************************** */
+/*                SECTION 3               */
+/* ************************************** */
+.section3 {
+    background-color: #ede4d9;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
+}
+
+.section3 .content {
+    display: flex;
+    justify-content: space-between; /* Evenly spaced */
+    flex-wrap: nowrap;
+    align-items: center;
+    max-width: 90%;
+
+    font-size: 30px;
+}
+
+.section3 .content div {
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.section3 .content div p {
+    text-align: left;
+}
+
+.section3 .content img {
+    margin: 0;
+    width: 65%;
+    margin-left: 11%;
+}
+.section3 .content .sec3-p1 img {
+    transform: rotate(-6deg);
+}
+.section3 .content .sec3-p2 img {
+    transform: rotate(8deg);
+}
+
+
+/* ************************************** */
+/*                SECTION 4               */
+/* ************************************** */
+.section4 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+    background-color: #ede4d9;
+}
+
+.section4 .content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.section4 .content p {
+    font-size: 30px;
+    max-width: 60%;
+}
+
+.section4 .content img {
+    width: 40%;
+}
+
+.section4 .content #sec4-par2 {
+    margin: 30px;
+}
+
+
+/* ************************************** */
+/*                FOOTER                  */
+/* ************************************** */
+footer {
+    background-color: #6a3629;
+    /* padding: 20px; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-tag {
+    flex-grow: 1;
+}
+
+.signup-tag img {
+    /* look into - transform: translate() method */
+    height: auto;
+    float: right;
+    width: 125px;
+    rotate: -19deg;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+
+/* ************************************** */
+/*                MOBILE                  */
+/* ************************************** */
+@media (max-width: 1120px) {
+    /* shrink picture + adjust margins */
+    /* flex - center into stack */
+    .section1 .content {
+        flex-direction: column-reverse;
+        margin: 0;
+        font-size: 24px;
+    }
+    .section1 .content img {
+        margin: 0 0 20px 0;
+        width: 50%;
+    }
+}
+
+@media (max-width: 878px) {
+    /* SECTION 1m */
+    .section1 .content {
+        padding-bottom: 20%;
+    }
+    .section1 .content p {
+        /* padding: 0 7px 0 7px; */
+        font-size: 24px;
+        text-align: center;
+    }
+
+    /* SECTION 3m */
+    .section3 {
+        height: 85vh;
+    }
+    .section3 content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section3 .content p, img {
+        width: 100%;
+        text-align: center;
+        font-size: 22px;
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* .section1 {
+        height: 85vh;
+    } */
+    .section1 .content {
+        padding-top: 45%;
+    }
+    .section1 .content img {
+        width: 70%;
+    }
+    .section1 .content p {
+        padding: 0 20px 0 20px;
+        font-size: 28px;
+        max-width: 90%;
+    }
+    .section1 .logo img {
+        margin: 0;
+    }
+
+    .section3 .content {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .section3 .content p {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .section3 .content img {
+        margin: 0 auto;
+        margin-left: 15%;
+    }
+    .section3 .content .sec3-p1 {
+        width: 100%;
+    }
+    .section3 .content .sec3-p2 {
+        width: 100%;
+    }
+    .section3 .content .sec3-p1 img {
+        transform: rotate(0);
+    }
+    .section3 .content .sec3-p2 img {
+        transform: rotate(0);
+    }
+
+
+    .section4 .content p {
+        font-size: 22px;
+        max-width: 100%;
+    }
+    .section4 .content #sec4-par2 {
+        margin: 0;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .section4 .content img {
+        width: 80%;
+    }
+}
+
+
+/* 
+    Thank you @dustinusey for the hamburger menu:
+    https://github.com/treehouse/ham-menu
+*/

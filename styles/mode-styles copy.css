@@ -1,0 +1,98 @@
+.modes-section {
+    height: auto;
+    background-color: #ede4d9;
+    margin: 0;
+    padding: 0;
+    transition: none;
+    align-items: flex-start;
+}
+
+.content {
+    flex-direction: column;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+    .content {
+        padding: 0;
+        margin-top: 100px;
+        max-width: 80%;
+    }
+}
+
+.content h1#intro {
+    text-align: center;
+    line-height: 1.3;
+    width: 90%;
+}
+@media (max-width: 768px) {
+    .content h1#intro {
+        font-size: medium;
+    }
+}
+
+span#linebreak {
+    margin: 0 auto;
+    border-bottom: 4px solid black;
+    border-radius: 100px;
+    width: 25%;
+    height: 5px;
+    display: block;
+}
+
+.game-cards {
+    margin-top: 50px;
+}
+
+.card {
+    border: solid 2px black;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    padding: 20px 20px 10px 20px;
+}
+
+.card .title {
+    margin: 0;
+    border-bottom: dashed 2px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.card .subtitle {
+    font-weight: lighter;
+    margin: 8px auto 0 auto;
+}
+
+.card ul {
+    padding-left: 0;
+}
+.card ul li {
+    margin-top: .5em;
+}
+
+@media (max-width: 768px) {
+    .card h2{
+        font-size: large;
+    }
+
+    .card h3 {
+        font-size: medium;
+    }
+
+    .card p {
+        font-size: medium;
+        line-height: 1.3;
+    }
+
+    .card ul li {
+        line-height: 1.3;
+        margin-top: 5px;
+    }
+}
+
+/* 
+    Can underline words within a <p> tag
+    https://css-tip.com/rounded-dashed-underline/
+*/
+
