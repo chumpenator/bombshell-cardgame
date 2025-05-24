@@ -131,7 +131,7 @@ nav .ham-menu { /* Hide secret menu */
         height: 50px;
         width: 40px;
         margin-left: auto;
-        margin-right: 8%;
+        margin-right: 10%;
         position: relative;
     }
     .ham-menu:hover {
@@ -424,9 +424,10 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* .section1 {
-        height: 85vh;
-    } */
+    nav .logo img {
+        margin-left: 0;
+    }
+
     .section1 .content {
         padding-top: 45%;
     }
@@ -435,19 +436,22 @@ footer {
     }
     .section1 .content p {
         padding: 0 20px 0 20px;
-        font-size: 28px;
+        font-size: 24px;
         max-width: 90%;
     }
     .section1 .logo img {
         margin: 0;
     }
 
+    .section3 {
+        height: auto;
+    }
     .section3 .content {
         flex-direction: column;
         padding-bottom: 20px;
     }
     .section3 .content p {
-        font-size: 28px;
+        font-size: 24px;
         margin-bottom: 10px;
     }
     .section3 .content img {
@@ -467,14 +471,16 @@ footer {
         transform: rotate(0);
     }
 
-
+    .section4 {
+        padding-top: 0;
+    }
     .section4 .content p {
         font-size: 22px;
         max-width: 100%;
     }
     .section4 .content #sec4-par2 {
         margin: 0;
-        margin-top: 15px;
+        margin-top: 20px;
         margin-bottom: 10px;
     }
     .section4 .content img {
