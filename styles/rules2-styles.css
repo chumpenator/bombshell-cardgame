@@ -1,0 +1,302 @@
+.rules-section {
+    height: auto; /* resets height so it doesn't cut off */
+    background-color: #ede4d9;
+    margin: 0; /* clear originals  */
+    padding: 0;
+    transition: none;
+}
+
+.rules-section .content {
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    margin-top: 20px;
+    max-width: 800px;
+}
+
+.rules-section .content p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+.rules-section .content h1 {
+    font-size: 55px;    
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* .rules-section div {
+    margin-top: 35px;
+} */
+
+
+/* ************************************** */
+/*               MAIN TITLE               */
+/* ************************************** */
+.rules-section .content .learn {
+    padding: 0;
+}
+
+.rules-section .content .learn h1 {
+    /* border-bottom: dashed 2px black; */
+    padding-bottom: 10px;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.rules-section .line {
+    margin: 35px auto 0;
+    border-bottom: dashed 2px black;
+    width: 83%;
+}
+
+.rules-section .line#first-line {
+    margin: 10px auto 0;
+}
+
+/* create dashed bottom */
+/* .rules-section .content .learn h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: dashed 2px black;
+  position: absolute;
+  bottom: -10px;   Adjust spacing from the text 
+  left: 0;
+  justify-content: center;
+} */
+
+
+/* ************************************** */
+/*  GENERAL BODY TEXT TO GET 'EM IN LINE  */
+/* ************************************** */
+.content .mission .body-text,
+.content .setup .body-text,
+.content .mission-phases .body-text,
+.content .overview .body-text {
+    width: 80%;
+    margin-top: 20px;
+    font-size: 27px;
+    text-align: left;
+    font-style: normal;
+}
+
+
+/* ************************************** */
+/*               SUBTITLES                */
+/* ************************************** */
+.content .mission .subtitle,
+.content .setup .subtitle,
+.content .mission-phases .subtitle,
+.content .overview .subtitle {
+    font-family: a-typewriter;
+    margin: 0;
+    font-style: italic;
+    font-size: 42px;
+    text-align: center;
+}
+
+
+/* ************************************** */
+/*            MISSION COMPLETE            */
+/* ************************************** */
+.content .mission {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0; /* resets from general div */
+}
+
+.mission h1 {
+    border-bottom: none;
+    font-size: 50px;
+    padding-bottom: 0;
+}
+
+.content .mission img {
+    margin: 0 auto;
+    justify-content: center;
+    width: 50%;
+}
+
+
+/* ************************************** */
+/*            MISSION OVERVIEW            */
+/* ************************************** */
+.content .overview {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ************************************** */
+/*             MISSION PREP               */
+/* ************************************** */
+.content .setup {
+    display: flex;
+    flex-direction: column;
+}
+
+.rules-section .content p#setup-cards {
+    margin-top: 40px;
+}
+
+.content .setup img {
+    margin: 0 auto;
+    width: 50%; 
+}
+
+
+/* ************************************** */
+/*             MISSION PHASES             */
+/* ************************************** */
+.content .mission-phases {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .mission-phases .body-text span {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.content .mission-phases .body-text img {
+    margin-left: 32%
+}
+
+.content .mission-phases .body-text img#countdown {
+    transform: rotate(-10deg);
+    width: 40%;
+}
+
+
+/* ************************************** */
+/*          DOWNLOAD BUTTON STYLES        */
+/* ************************************** */
+.buttons {
+    margin: 0 auto;
+}
+
+.buttons ul {
+    padding: 0;
+}
+
+.buttons li {
+    text-align: center;
+    margin: 0 auto;
+    list-style: none;
+    background-color: #6d4b45;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.9);
+    width: 65%;
+}
+.buttons li:hover {
+    background-color: #83534a;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.9);
+}
+
+.buttons li:first-child {
+    margin-bottom: 20px;
+}
+
+.buttons li a {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    color: #ffca98;
+    font-size: 35px;
+    border: 1px dashed #ffca98;
+    padding: 15px;
+}
+
+
+/* ************************************** */
+/*                MOBILE                  */
+/* ************************************** */
+
+@media (max-width: 768px) {
+    .rules-section .content {
+        padding: 0;
+        margin-top: 100px; /* keeps from scooting up */
+    }
+
+    .rules-section .content h1 {
+        font-size: 40px;    
+        margin-bottom: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .rules-section .content p#setup-cards {
+        margin-top: 30px;
+    }
+
+    .rules-section .learn h1 {
+        padding-left: 70px;
+        padding-right: 70px;
+        font-size: 45px;
+    }
+
+    .learn .line {
+        margin-top: 25px;
+    }
+    .rules-section .line {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    .content .mission .subtitle,
+    .content .setup .subtitle,
+    .content .mission-phases .subtitle,
+    .content .overview .subtitle {
+        font-size: 30px;
+    }
+
+    .content .mission .body-text,
+    .content .setup .body-text,
+    .content .mission-phases .body-text,
+    .content .overview .body-text {
+        font-size: 24px;
+    }
+
+    .content .mission .body-text#mission-text-1 {
+        margin-bottom: 0;
+    }
+
+    .content .mission img {
+        width: 70%;
+        margin-top: 0;
+    }
+
+    .content .setup img {
+        /* margin: 0 auto; */
+        width: 80%;
+    }
+
+    .content .mission-phases h1 {
+        padding-left: 70px;
+        padding-right: 70px;
+    } 
+
+    .content .mission-phases .body-text img {
+        width: 55%;
+        margin-left: 20%;
+    }
+    .content .mission-phases .body-text img#countdown {
+        transform: rotate(-10deg);
+        width: 65%;
+    }
+
+    .buttons li a {
+        font-size: 20px;
+    }
+
+    .signup-tag img {
+        width: 125px;
+        rotate: -20deg;
+        margin-top: 10px;
+        transform: translateY(20px);
+    }
+}

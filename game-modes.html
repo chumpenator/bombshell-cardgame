@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bombshell | The Card Game</title>
+    <link rel="icon" href="img/briefcase-icon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/mode-styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="img/bombshell-logo.png" alt="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li id="current"><a href="#">Game Modes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Secret Menu -->
+    <div class="secret-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li id="current"><a href="#">Game Modes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Section(s) -->
+    <section class="modes-section">
+        <div class="content">
+            
+            <h1 id="intro">
+                You're an agent that doesn't play by the rules. Use one of the 
+                alternate game modes that better fits your style or try one
+                just to change things up!
+            </h1>
+
+            <span id="linebreak"></span>
+
+            <!-- GAME MODES -->
+            <div class="game-cards">
+
+                <div class="card">
+                    <h2 class="title">Locked & Loaded</h2>
+                    <h3 class="subtitle">Alternate Rules</h3>
+                    <p class="card-paragraph">
+                        • A handcuffed briefcase CANNOT be viewed by an X-RAY GLASSES.
+                        <br><br>
+                        <b>OPTIONAL:</b> If you play a JAILBREAK card, you're allowed to play 1 extra card that turn.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2 class="title">No One's Safe</h2>
+                    <h3 class="subtitle">Card Removal</h3>
+                    <p class="card-paragraph">
+                        • Remove all HANDCUFFS and JAILBREAK cards from the deck.
+                        <br>
+                        • Gameplay and remaining cards play like normal.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2 class="title">Agent Rando</h2>
+                    <h3 class="subtitle">Alternate Setup</h3>
+                    <p class="card-paragraph">
+                        • For 3-5 agent games.
+                        <br>
+                        • During setup, add 1 more briefcase than there are agents. <i>ex. 4 players = 5 cases</i>
+                        <br>
+                        • When dealing the cases, place the extra case in the play area as if someone were there.
+                        <br>
+                        • Gameplay and all action cards continue like normal.
+                        <br><br>
+                        <b>OPTIONAL:</b> When passing what would be Agent Rando's turn, the fuse token automatically moves down a space if it's <b>activated</b>&#128293;.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2 class="title">Snowball Effect</h2>
+                    <h3 class="subtitle">Alternate Rules</h3>
+                    <p class="card-paragraph">
+                        • If one agent plays ROTATE, you may also play a ROTATE outside of your turn (like stacking) to add one more to the briefcases' rotation <b>in the direction chosen by the original player</b>.
+                        <br>
+                        • FREEZE! still only cancels 1 ROTATE card if agents begin stacking.
+                        <br><br><br>
+                        <b>ex.</b> If 2 agents play a ROTATE on top of your own, the briefcases must rotate 3 times.    
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2 class="title">Make It Count</h2>
+                    <h3 class="subtitle">Alternate Setup</h3>
+                    <p class="card-paragraph">
+                        
+                        • Remove <u>all</u> X-RAY GLASSES and SCRAMBLEs from the deck before shuffling.
+                        <br>
+                        • Deal 5 cards to each agent, then give each agent <b>1</b> X-RAY GLASSES card to place in front of them. Remove the rest from play.
+                        <br>
+                        • Gameplay and cards continue like normal.
+                        <br>
+                        • The X-RAY GLASSES acts like a 6th card in your hand, and you may play it (during your turn) when you choose.
+                        <br>
+                        • When playing the X-RAY GLASSES, that counts as the card played for your turn.
+                        <br>
+                        • STICKY FINGERS cannot steal the X-RAY GLASSES card.
+                        
+                    </p>
+                </div>             
+
+                <div class="card" id="mano">
+                    <h2 class="title">Mano a Mano <span style="font-weight: lighter;font-size: smaller;">(2 Player Mode)</span></h2>
+                    <h3 class="subtitle">Alternate Setup</h3>
+                    <p class="card-paragraph">
+                        • Deal the action cards and set up like normal.
+                        <br>
+                        • Shuffle all the briefcases and deal both agents a case. Put the remaining cases around the board as if in front of other agents.
+                        <br>
+                        • Agents look inside their own case, and the game starts and plays like normal.
+                        <br><br><br>
+                        <b>OPTIONAL:</b> Remove all the HANDCUFFS and JAILBREAK cards from the deck.
+                        <br>
+                        <b>OPTIONAL:</b> Remove the ACTIVATE/DEACTIVATE cards from the deck.
+                    </p>
+                </div>
+
+            </div>    
+
+            <!-- <div class="submit-version"></div> -->    
+
+        </div>     
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="signup-tag">
+            <img src="img/assets/signup-tag.png" alt="Stay in the loop!">
+        </div>
+
+        <div class="signup-box">
+            <input type="email" placeholder="Enter your email">
+            <button>
+                <span>Sign Up</span>
+            </button>
+        </div>
+    </footer>
+</body>
+</html>
