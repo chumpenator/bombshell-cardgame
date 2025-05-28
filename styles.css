@@ -282,8 +282,6 @@ section {
 /* ************************************** */
 .section3 {
     background-color: #ede4d9;
-    /* padding-top: 30px;
-    padding-bottom: 30px; */
 }
 
 .section3 .content {
@@ -325,7 +323,6 @@ section {
 /*                SECTION 4               */
 /* ************************************** */
 .section4 {
-    padding-top: 50px;
     padding-bottom: 50px;
     height: auto;
     background-color: #ede4d9;
