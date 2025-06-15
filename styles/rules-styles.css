@@ -11,7 +11,7 @@
     flex-direction: column;
     display: inline-block;
     margin-top: 20px;
-    max-width: 800px;
+    max-width: 850px;
 }
 
 .rules-section .content p {
@@ -27,10 +27,6 @@
     text-align: center;
 }
 
-/* .rules-section div {
-    margin-top: 35px;
-} */
-
 
 /* ************************************** */
 /*               MAIN TITLE               */
@@ -40,10 +36,10 @@
 }
 
 .rules-section .content .learn h1 {
-    /* border-bottom: dashed 2px black; */
     padding-bottom: 10px;
     position: relative;
     margin-bottom: 0;
+    font-size: 62px;
 }
 
 .rules-section .line {
@@ -55,18 +51,6 @@
 .rules-section .line#first-line {
     margin: 10px auto 0;
 }
-
-/* create dashed bottom */
-/* .rules-section .content .learn h1::after {
-  content: "";
-  display: block;
-  width: 100%;
-  border-bottom: dashed 2px black;
-  position: absolute;
-  bottom: -10px;   Adjust spacing from the text 
-  left: 0;
-  justify-content: center;
-} */
 
 
 /* ************************************** */
@@ -81,6 +65,7 @@
     font-size: 27px;
     text-align: left;
     font-style: normal;
+    hyphens: auto;
 }
 
 
@@ -92,7 +77,7 @@
 .content .mission-phases .subtitle,
 .content .overview .subtitle {
     font-family: a-typewriter;
-    margin: 0;
+    margin: 0 auto;
     font-style: italic;
     font-size: 42px;
     text-align: center;
@@ -117,7 +102,7 @@
 .content .mission img {
     margin: 0 auto;
     justify-content: center;
-    width: 50%;
+    width: 60%;
 }
 
 
@@ -156,18 +141,32 @@
     flex-direction: column;
 }
 
+.content .mission-phases .body-text {
+    display: flex;
+    flex-direction: column;
+}
+
 .content .mission-phases .body-text span {
-    margin-top: 25px;
+    margin-top: 17px;
     display: inline-block;
 }
 
+.content .mission-phases .body-text span#phase-2,
+.content .mission-phases .body-text span#phase-3 {
+    margin-top: 0;
+}
+
 .content .mission-phases .body-text img {
-    margin-left: 32%
+    margin: 0 auto;
+}
+
+.content .mission-phases .body-text img#turn-burn {
+    width: 42%;
 }
 
 .content .mission-phases .body-text img#countdown {
     transform: rotate(-10deg);
-    width: 40%;
+    width: 50%;
 }
 
 
@@ -215,6 +214,28 @@
 /* ************************************** */
 /*                MOBILE                  */
 /* ************************************** */
+@media (max-width: 1120px) {
+    .content .mission .body-text,
+    .content .setup .body-text,
+    .content .mission-phases .body-text,
+    .content .overview .body-text {
+        width: 80%;
+        margin-top: 20px;
+        font-size: 32px;
+        text-align: left;
+        font-style: normal;
+    }
+
+    .rules-section .learn h1 {
+        font-size: 65px;
+    }
+
+    .content .mission-phases .body-text img {
+        width: 55%;
+        margin-left: 20%;
+    }
+}
+
 
 @media (max-width: 768px) {
     .rules-section .content {
@@ -236,7 +257,7 @@
     .rules-section .learn h1 {
         padding-left: 70px;
         padding-right: 70px;
-        font-size: 45px;
+        font-size: 42px;
     }
 
     .learn .line {
@@ -275,6 +296,7 @@
         width: 80%;
     }
 
+    /* MISSION PHASES */
     .content .mission-phases h1 {
         padding-left: 70px;
         padding-right: 70px;
