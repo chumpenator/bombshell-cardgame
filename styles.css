@@ -353,9 +353,11 @@ section {
   transform: rotate(8deg);
 }
 
-iframe {
+.content .sign-up iframe {
     background-image: url('img/paper_bg.png');
     width: 100%;
+    margin: 0 auto;
+    border: none;
 }
 
 
@@ -418,6 +420,7 @@ footer {
     height: auto;
     width: 150px;
     rotate: -19deg;
+    z-index: 2;
 }
 
 /* BUTTON */
@@ -429,6 +432,7 @@ footer {
 }
 .footer-div .footer-button button:hover {
     background-color: #83534a;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 
@@ -473,12 +477,22 @@ footer {
         font-size: 24px;
     }
 
+    .content .sign-up {
+        width: 90%;
+        margin: 0 auto 0 3%;
+    }
+    .content .sign-up 
+
     .content .cards p {
         hyphens: none;
     }
 
     .footer-div {
         width: 80%;
+    }
+
+    .footer-div .footer-button button p {
+        font-size: 14px;
     }
 }
 
