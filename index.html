@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles/submit-form.css">
     <script src="scripts.js" defer></script>
+    <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 
 <body>
@@ -56,8 +57,21 @@
 
         <div class="line"></div>
 
-        <!-- submission form here... -->
+        <div class="sign-up">
+          <iframe 
+            data-tally-src="https://tally.so/embed/3lXOYo?hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+            loading="lazy" 
+            height="298" 
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0" 
+            title="BOMBSHELL">
+          </iframe>
+          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        </div>
 
+        <div class="line"></div>
+        
         <!-- MISSION DIV -->
         <div class="mission">
 
@@ -66,16 +80,6 @@
             or will you end up with one of the bombs when time runs out?
           </p>
           <img src="img/placeholders/home-mission.png" alt="home-mission">
-
-          <!-- <div class="mission-p1">
-            <p>Your mission is to <b>find and take the briefcase full of money...</b></p>
-            <img src="img/placeholders/home-sec2-money.png" alt="money-polaroid">
-          </div>
-          
-          <div class="mission-p2">
-            <p><b>...</b>or will you end up with one of the <b>bombs</b> when time runs out?</p>
-            <img src="img/placeholders/home-sec2-bombs.png" alt="money-bombs">
-          </div> -->
             
         </div>
 
@@ -102,19 +106,18 @@
 
     <!-- FOOTER -->
     <footer>
-      <div class="signup-tag" style="display: none;">
-        <img src="img/assets/signup-tag.png" alt="Stay in the loop!">
-      </div>
+      <div class="footer-div">
+        <div class="signup-tag">
+          <img src="img/assets/signup-tag.png" alt="Stay in the loop!">
+        </div>
 
-      <div>
-        <p style="color: beige; margin: 0 auto; padding: 0 200px; display: inline-block;">
-          A new email sign-up will be here soon! 
-          Just went thru a breakup with MailerLite...it wasn't mutual and they took the furntiure we bought together. 
-          Please check back soon. &#9829;
-        </p>
-      </div>
+        <div class="footer-button">
+          <button data-tally-open="3lXOYo" data-tally-layout="modal" data-tally-hide-title="1" data-tally-emoji-text="💣" data-tally-emoji-animation="bounce" data-tally-auto-close="1000">
+            <p>Sign Up!</p>
+          </button>
+        </div>
 
-      
+      </div>
     </footer>
   <!-- END SUBMISSION FORM -->
 
