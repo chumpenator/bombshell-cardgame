@@ -300,7 +300,14 @@
     .content .mission-phases h1 {
         padding-left: 70px;
         padding-right: 70px;
-    } 
+    }
+    
+    .content .mission-phases span b.mission-phase-title {
+        font-size: 24px;
+    }
+    .content .mission-phases span {
+        font-size: 21px;
+    }
 
     .content .mission-phases .body-text img {
         width: 55%;
@@ -313,12 +320,5 @@
 
     .buttons li a {
         font-size: 20px;
-    }
-
-    .signup-tag img {
-        width: 125px;
-        rotate: -20deg;
-        margin-top: 10px;
-        transform: translateY(20px);
     }
 }
