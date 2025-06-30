@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="styles/rules-styles.css"/>
   <link rel="stylesheet" href="styles/submit-form.css">
   <script src="scripts.js" defer></script>
+  <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 
 <body>
@@ -70,9 +71,7 @@
       <div class="overview">
         <h1>MISSION OVERVIEW</h1>
         <p class="body-text">
-          Agents take turns going clockwise, playing cards from their hand. You must outsmart the
-          others and rely on your memory as the briefcases change hands to take 
-          and keep the money, all while the timer steadily ticks down to zero.
+          Agents take turns going clockwise, playing cards from their hand. You must outsmart the others and rely on your memory as the briefcases change hands to take and keep the money—all while the timer steadily ticks down to zero.
         </p>
       </div>
 
@@ -111,17 +110,20 @@
           <p id="mission-phase-intro">There are 3 phases to an agent's turn:</p>
 
           <div class="phase-1">
+            <span class="gameplay-hidden">Gameplay Phase One: Turn or Burn</span>
             <h2 class="mission-phase-title">1. Turn or Burn</h2>
             <p>From your hand, play a card <b>or</b> burn any number of cards face-down instead.</p>
             <img src="img/placeholders/phase1-play.png" alt="play-polaroid" id="turn-burn">
           </div>
 
           <div class="phase-2">
+            <span class="gameplay-hidden">Gameplay Phase Two: Reload</span>
             <h2 class="mission-phase-title">2. Reload</h2>
             <p>Draw until you have 5 cards in your hand again.</p>
           </div>
 
           <div class="phase-3">
+            <span class="gameplay-hidden">Gameplay Phase Three: Countdown</span>
             <h2 class="mission-phase-title">3. Countdown</h2>
             <p>If the fuse is <b>armed</b>, the token moves one space closer to the bomb.</p>
             <img src="img/placeholders/phase3-countdown.png" alt="countdown-polaroid" id="countdown">

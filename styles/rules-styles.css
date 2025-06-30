@@ -187,6 +187,10 @@
     width: 50%;
 }
 
+/* Hidden Spans */
+.content .mission-phases .body-text .gameplay-hidden {
+    display: none;
+}
 
 /* ************************************** */
 /*          DOWNLOAD BUTTON STYLES        */
