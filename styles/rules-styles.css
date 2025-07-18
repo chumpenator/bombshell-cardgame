@@ -129,7 +129,10 @@
 
 .content .setup img {
     margin: 0 auto;
-    width: 50%; 
+    width: 55%; 
+}
+.content .setup img#board-setup {
+    width: 70%; 
 }
 
 
@@ -320,8 +323,8 @@
 
     /* MISSION PHASES */
     .content .mission-phases h1 {
-        padding-left: 70px;
-        padding-right: 70px;
+        /* padding: 0 70px; */
+        font-size: 34px;
     }
     
     .content .mission-phases span b.mission-phase-title {
@@ -331,9 +334,18 @@
         font-size: 21px;
     }
 
+    .content .mission-phases .phase-1 p,
+    .content .mission-phases .phase-3 p {
+        margin-bottom: 0;
+    }
+
     .content .mission-phases .body-text img {
         width: 55%;
         margin-left: 20%;
+    }
+    .content .mission-phases .body-text img#turn-burn {
+        width: 50%;
+        margin: auto;
     }
     .content .mission-phases .body-text img#countdown {
         transform: rotate(-10deg);

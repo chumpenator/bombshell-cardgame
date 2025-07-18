@@ -292,6 +292,7 @@ section {
 
 .home-section .content img {
     width: 77%;
+    margin: 0 auto 0 10%;
 }
 
 .home-section .line {
@@ -409,8 +410,7 @@ section {
 }
 
 .explosion img#explode-gameOver {
-    margin: 0 auto;
-    width: 65%;
+    width: 75%;
 }
 
 
@@ -503,6 +503,7 @@ footer .strap-footer::before {
 
     .home-section .content .intro p {
         margin-top: 25px;
+        margin-bottom: 0;
     }
 
     .footer-div {
