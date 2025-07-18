@@ -25,6 +25,7 @@ h1 {
     font-size: x-large;
     border-bottom: 2px dashed;
     padding-bottom: 7px;
+    margin-bottom: 50px;
 }
 
 .content p {
@@ -35,11 +36,7 @@ h1 {
 }
 .test {
     font-family: a-typewriter;
-    margin-top: 50px;
 }
 .test2 {
     font-family: typewriter-clean;
-}
-.test3 {
-    font-family: typewriter-messy;
 }
