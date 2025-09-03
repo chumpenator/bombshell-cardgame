@@ -357,21 +357,22 @@ section {
   content: '';
   position: absolute;
   width: 125px;
-  height: 30px;
+  height: 40px;
   background: rgba(255, 255, 153, 0.5);
   top: -10px;
   border: 1px solid #ddd;
-  transform: rotate(-8deg);
 }
 
 .content .sign-up::before {
   left: -10px; /* or try -20px for more drama */
+  transform: rotate(-15deg);
 }
 
 .content .sign-up::after {
   left: auto;
   right: 10px;
   transform: rotate(8deg);
+  top: 20px;
 }
 
 .content .sign-up iframe {
@@ -516,6 +517,23 @@ footer .strap-footer::before {
     .content .sign-up {
         width: 90%;
         margin: 0 auto 0 3%;
+    }
+
+    .content .sign-up::before,
+    .content .sign-up::after {
+        height: 30px;
+        top: -10px;
+    }
+
+    .content .sign-up::before {
+        transform: rotate(-8deg);
+    }
+    .content .sign-up::after {
+        transform: rotate(8deg);
+    }
+
+    .content .sign-up iframe h1 {
+        color: blue;
     }
 }
 
