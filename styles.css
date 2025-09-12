@@ -372,7 +372,6 @@ section {
   left: auto;
   right: 10px;
   transform: rotate(8deg);
-  top: 20px;
 }
 
 .content .sign-up iframe {
@@ -522,7 +521,6 @@ footer .strap-footer::before {
     .content .sign-up::before,
     .content .sign-up::after {
         height: 30px;
-        top: -10px;
     }
 
     .content .sign-up::before {
@@ -530,10 +528,6 @@ footer .strap-footer::before {
     }
     .content .sign-up::after {
         transform: rotate(8deg);
-    }
-
-    .content .sign-up iframe h1 {
-        color: blue;
     }
 }
 

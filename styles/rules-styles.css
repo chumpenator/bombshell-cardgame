@@ -129,10 +129,11 @@
 
 .content .setup img {
     margin: 0 auto;
-    width: 55%; 
+    width: 80%; 
 }
 .content .setup img#board-setup {
-    width: 70%; 
+    width: 73%;
+    margin-bottom: 15px;
 }
 
 
