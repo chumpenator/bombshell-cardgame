@@ -454,15 +454,18 @@ footer .strap-footer::before {
 .footer-div {
     display: flex;
     justify-content: space-evenly;
-    width: 20%;
-    /* margin: 0 20px; */
+    /* width: 20%; */
+    margin-top: 15px;
 }
 
-/* SOCIAL MEDIA ICONS */
+/* ************************************** */
+/*          SOCIAL MEDIA ICONS            */
+/* ************************************** */
 .footer-div .sm-icon {
     background-color: #6d4b45;
     padding: 8px;
-    margin: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
     border-radius: 4px;
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
@@ -471,17 +474,12 @@ footer .strap-footer::before {
     box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
 }
 
-.footer-div .sm-icon a {
-    
-}
-
 .footer-div .sm-icon img {
-    width: 50px;
+    display: block;
+    width: 40px;
     border: 1px dashed #ffca98;
-    padding: 15px;
+    padding: 9px 18px;
 }
-
-
 
 .signup-tag img {
     height: auto;
@@ -491,6 +489,7 @@ footer .strap-footer::before {
 }
 
 /* BUTTON */
+/* 
 .footer-div .footer-button button {
     background-color: #6d4b45;
     border: none;
@@ -511,6 +510,7 @@ footer .strap-footer::before {
     padding: 15px;
     font-size: 16px;
 }
+*/
 
 
 /* ************************************** */
@@ -528,7 +528,13 @@ footer .strap-footer::before {
 
     .footer-div {
         width: 40%;
+        margin-top: 0;
         padding-bottom: 5px;
+    }
+
+    .footer-div .sm-icon img {
+        width: 20px;
+        padding: 7px 11px;
     }
 }
 
