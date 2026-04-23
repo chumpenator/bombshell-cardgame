@@ -136,6 +136,10 @@
     width: 73%;
     margin-bottom: 15px;
 }
+.content .setup img#hand-deal {
+    margin: 0 auto;
+    width: 35%; 
+}
 
 
 /* ************************************** */
@@ -330,6 +334,9 @@
     .content .setup img {
         /* margin: 0 auto; */
         width: 80%;
+    }
+    .content .setup img#hand-deal {
+        width: 41%; 
     }
 
     /* MISSION PHASES */
