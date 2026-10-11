@@ -329,6 +329,11 @@ section {
     margin: 0 auto;
 }
 
+.intro img#info-tag {
+    margin: 30px auto 0;
+    width: 25%;
+}
+
 
 /* ************************************** */
 /*                MISSION                 */
