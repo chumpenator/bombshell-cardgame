@@ -19,25 +19,33 @@
   <link rel="stylesheet" href="styles/submit-form.css">
 
   <!-- POPUP AFTER 20 SEC SCRIPT -->
-  <!-- <script>
-    window.TallyConfig = {
-      "formId": "3lXOYo",
-      "popup": {
-        "emoji": {
-          "text": "💣",
-          "animation": "heart-beat"
-        },
-        "layout": "modal",
-        "hideTitle": true,
-        "autoClose": 3000,
-        "formEventsForwarding": true,
-        "open": {
-          "trigger": "time",
-          "ms": 20000
+  <script>
+    // Check if the user has already seen or closed the popup previously
+    if (!localStorage.getItem('bombshell_popup_seen')) {
+      
+      // 1. Set the Tally Configuration
+      window.TallyConfig = {
+        "formId": "3lXOYo",
+        "popup": {
+          "emoji": {
+            "text": "💣",
+            "animation": "heart-beat"
+          },
+          "layout": "modal",
+          "hideTitle": true,
+          "autoClose": 3000,
+          "formEventsForwarding": true,
+          "open": {
+            "trigger": "time",
+            "ms": 20000
+          }
         }
-      }
-    };
-  </script> -->
+      };
+
+      // 2. Set the flag in the browser so it won't run again on future page loads
+      localStorage.setItem('bombshell_popup_seen', 'true');
+    }
+  </script>
 
   <script src="scripts.js" defer></script>
   <script async src="https://tally.so/widgets/embed.js"></script>
