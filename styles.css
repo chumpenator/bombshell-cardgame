@@ -11,6 +11,50 @@
     src: url(assets/fonts/monospace-typewriter/MonospaceTypewriter.ttf);
 }
 
+/* ************************************** */
+/*            SLIDE ANIMATIONS            */
+/* ************************************** */
+
+/* Slide in from the left */
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px) translateX(-50px); /* Starts further left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-10px) translateX(0); /* Lands at final spot */
+    }
+}
+
+/* Slide in from the right */
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        /* Start with extra offset, keeping your rotation, scale, and vertical shift */
+        transform: rotate(10deg) translateX(80px) translateY(10px) scale(1.15); 
+    }
+    100% {
+        opacity: 1;
+        /* Lands at your exact final transform */
+        transform: rotate(10deg) translateX(20px) translateY(10px) scale(1.15); 
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px); /* Starts 40px lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Lands at its home position */
+    }
+}
+
+/* ************************************** */
+/* ************************************** */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -277,7 +321,7 @@ section {
     flex-direction: column;
     display: inline-block;
     margin-top: 70px;
-    max-width: 850px;
+    max-width: 900px;
 }
 
 .home-section .content div {
@@ -325,6 +369,84 @@ section {
     margin-top: 0;
 }
 
+.home-section .content .grid {
+    margin-top: 0;
+}
+
+/* reset margin for images in grid */
+.home-section .content .grid img {
+    margin: 0;
+}
+
+/* .intro img#info-tag {
+    margin: 30px auto 0;
+    width: 25%;
+} */
+
+.intro .grid {
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+
+    /* debug -- visualize the columns */
+    /* background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.1),
+        rgba(255, 0, 0, 0.1) calc(33.33% - 1px),
+        black calc(33.33% - 1px),
+        black 33.33%
+    ); */
+}
+
+.intro .grid img#ks-logo {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 3;
+
+    justify-self: right;
+    transform: translateY(-10px);
+
+    animation: slideFromLeft 0.8s ease-out forwards;
+}
+
+.intro .grid img#game-display {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    z-index: 2;
+
+    justify-self: center;
+
+    animation: slideUp 0.8s ease-out both;
+}
+
+.intro .grid img#info-tag {
+    grid-column: 3;
+    grid-row: 1;
+    z-index: 3;
+    
+    transform: rotate(10deg) translateX(20px) translateY(10px) scale(1.15);
+    justify-self: center;
+
+    /* Animation settings (takes 0.8s, with a slight 0.2s delay so it follows the logo) */
+    animation: slideFromRight 0.6s ease-out 0.2s both;
+    /* Note: Set the initial transform here so it doesn't flash before animating */
+    /* transform: rotate(10deg) translateX(20px) translateY(10px) scale(1.15); */
+}
+
+/* 
+.intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro p {
+    hyphens: auto;
+}
+
+.home-section .content .intro p {
+    margin-top: 0;
+}
+
 .intro img {
     margin: 0 auto;
 }
@@ -333,7 +455,7 @@ section {
     margin: 30px auto 0;
     width: 25%;
 }
-
+ */
 
 /* ************************************** */
 /*                MISSION                 */
@@ -402,9 +524,9 @@ section {
     flex-direction: column;
 }
 
-.cards p {
+/* .cards p {
     hyphens: auto;
-}
+} */
 
 .cards img#card-display {
     margin: 0 auto;
@@ -448,6 +570,7 @@ footer .strap-footer {
     box-shadow: 0 -1px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
+/* DASHED LINES */
 footer .strap-footer::before {
     content: "";
     position: absolute;
@@ -471,7 +594,7 @@ footer .strap-footer::before {
 }
 
 /* ************************************** */
-/*          SOCIAL MEDIA ICONS            */
+/*       SOCIAL MEDIA ICON BUTTONS        */
 /* ************************************** */
 .footer-div .sm-icon {
     background-color: #6d4b45;

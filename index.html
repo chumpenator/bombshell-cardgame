@@ -17,6 +17,28 @@
   <link rel="icon" href="img/assets/briefcase-icon.png" type="image/x-icon" />
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styles/submit-form.css">
+
+  <!-- POPUP AFTER 20 SEC SCRIPT -->
+  <!-- <script>
+    window.TallyConfig = {
+      "formId": "3lXOYo",
+      "popup": {
+        "emoji": {
+          "text": "💣",
+          "animation": "heart-beat"
+        },
+        "layout": "modal",
+        "hideTitle": true,
+        "autoClose": 3000,
+        "formEventsForwarding": true,
+        "open": {
+          "trigger": "time",
+          "ms": 20000
+        }
+      }
+    };
+  </script> -->
+
   <script src="scripts.js" defer></script>
   <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
@@ -31,6 +53,7 @@
       <ul class="nav-links">
           <li id="current"><a href="#">Home</a></li>
           <li><a href="rules.html">Rules</a></li>
+          <li><a href="#tally-open=3lXOYo&tally-layout=modal&tally-hide-title=1&tally-emoji-text=💣&tally-emoji-animation=wave&tally-auto-close=2000">Sign Up</a></li>
           <!-- <li><a href="game-modes.html">Game Modes</a></li> -->
           <!-- <li><a href="contact.html">Contact</a></li> -->
       </ul>
@@ -50,6 +73,7 @@
       <ul>
           <li id="current"><a href="#">Home</a></li>
           <li><a href="rules.html">Rules</a></li>
+          <li><a href="#tally-open=3lXOYo&tally-layout=modal&tally-hide-title=1&tally-emoji-text=💣&tally-emoji-animation=wave&tally-auto-close=2000">Sign Up</a></li>
           <!-- <li><a href="game-modes.html">Game Modes</a></li> -->
           <!-- <li><a href="contact.html">Contact</a></li> -->
       </ul>
@@ -63,12 +87,28 @@
       <!-- INTRO DIV -->
       <div class="intro">
         <h1 class="sr-only">What Is Bombshell</h1>
-        <p><b>Bombshell</b> is a race against enemy agents to <b>find the briefcase full of money</b> before the rest explode! Fast-paced and filled with deduction and deception, no two missions are ever quite alike<b>.</b>
-        </br></br>
-          It's <b>quick to learn and family friendly</b>, making it accessible for players of all skill levels!</p>
+        <p>
+          <b>Bombshell is a race against enemy agents to find the briefcase full of money before the rest explode!</b> Fast-paced and filled with deduction and deception, no two missions are ever the same<b>.</b>
+          </br></br>
+          <b>Quick to learn and family friendly</b>, making it accessible for players of all skill levels!
+        </p>
+        <div class="grid">
+          <img id="ks-logo" src="img/home/ks-logo.png" alt="coming to kickstarter 2027">
+          <img id="game-display" src="img/home/bombshell-game-display.png" alt="Bombshell game box display">
+          <img id="info-tag" src="img/home/game-info.png" alt="three to six players, ages 14+, 20 min playtime">
+        </div>
+      </div>
+
+      <!-- INTRO DIV -->
+      <!-- <div class="intro">
+        <h1 class="sr-only">What Is Bombshell</h1>
+        <p>
+          <b>Bombshell</b> is a race against enemy agents to <b>find the briefcase full of money</b> before the rest explode! Fast-paced and filled with deduction and deception, no two missions are ever quite alike<b>.</b>
+          </br></br>
+          <b>Quick to learn and family friendly</b>, making it accessible for players of all skill levels!
+        </p>
         <img src="img/home/bombshell-game-display.png" alt="Bombshell game box display">
-        <!-- <img id="info-tag" src="img/home/count-age-playtime.png" alt="three to six players, ages 14+, 20 min playtime"> -->
-      </div>  
+      </div>   -->
 
       <div class="line"></div>
 
@@ -89,7 +129,7 @@
         <h2 class="sr-only">High Stakes, Hidden Threats</h2>
 
         <p>
-          The briefcases are always hidden and changing hands<b>.</b> <b>Knowledge becomes power</b> as you begin to fight your memory, time, and the other agents<b>.</b>
+          <b>Knowledge becomes power</b> as you fight your memory, time, and the other agents because the briefcases are always hidden and changing hands<b>.</b>
         </p>
         <img src="img/home/find-the-money.png" alt="Display of briefcases with contents hidden then revealing where the money and bombs are">
           
@@ -100,7 +140,10 @@
       <!-- CARDS -->
       <div class="cards">
         <h2 class="sr-only">The deck is your arsenal</h2>
-        <p><b>13 unique gadgets and skills</b> to manipulate the mission to your advantage!</p>
+        <p>
+          The deck is your arsenal with
+          <b>13 unique gadgets and skills</b> to manipulate the mission to your advantage!
+        </p>
         <img src="img/home/action-cards.png" alt="5 action cards fanned out like in a hand showing the 5 different border colors for the cards" id="card-display">
       </div>
 
@@ -149,6 +192,12 @@
       <div class="sm-icon" id="bgg">
         <a href="https://boardgamegeek.com/boardgame/464162/bombshell" target="_blank">
           <img src="img/footer/bgg.png" alt="Bombshell BoardGameGeek Page">
+        </a>
+      </div>
+
+      <div class="sm-icon" id="sign-up">
+        <a href="#tally-open=3lXOYo&tally-layout=modal&tally-hide-title=1&tally-emoji-text=💣&tally-emoji-animation=wave&tally-auto-close=2000">
+          <img src="img/footer/sign-up.png" alt="email list">
         </a>
       </div>
 

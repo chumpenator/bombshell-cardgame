@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- created by svgstack.com | Attribution is required. -->
+
+<svg
+   width="201"
+   height="201"
+   viewBox="0 0 201 201"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="sign-up.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:export-filename="sign-up.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.838981"
+     inkscape:cx="82.776179"
+     inkscape:cy="81.543342"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <path
+     d="m 100.507,200.473 h -0.441 c -55.0176,0 -99.779501,-44.775 -99.779501,-99.809 v -0.44 C 0.286499,45.1893 45.0484,0.414307 100.066,0.414307 h 0.441 c 55.018,0 99.78,44.774993 99.78,99.809693 v 0.44 c 0,55.034 -44.762,99.809 -99.78,99.809 z M 100.066,7.18609 C 48.7785,7.18609 7.05629,48.9205 7.05629,100.224 v 0.44 c 0,51.303 41.72221,93.037 93.00971,93.037 h 0.441 c 51.287,0 93.01,-41.734 93.01,-93.037 v -0.44 c 0,-51.3035 -41.723,-93.03791 -93.01,-93.03791 z"
+     fill="#f9bb99"
+     id="path1"
+     style="display:none;stroke:#f9bb99" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="text">
+    <text
+       xml:space="preserve"
+       style="font-size:80px;line-height:1;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;inline-size:0;display:inline;fill:#f9bb99;stroke:#f9bb99;stroke-width:2"
+       x="156.3959"
+       y="99.379181"
+       id="text4"
+       transform="translate(3.2041092,-12.439615)"><tspan
+         id="tspan4"
+         x="94.895912"
+         y="99.379181"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1;font-family:'American Typewriter';-inkscape-font-specification:'American Typewriter';text-align:center;text-anchor:middle;fill:#f9bb99;stroke:#f9bb99">SIGN</tspan></text>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:80px;line-height:1;font-family:'American Typewriter';-inkscape-font-specification:'American Typewriter';text-align:center;letter-spacing:4.5px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:inline;fill:#f9bb99;stroke:#f9bb99;stroke-width:2"
+     x="98.000244"
+     y="167.42043"
+     id="text7"
+     inkscape:label="UP"><tspan
+       sodipodi:role="line"
+       id="tspan7"
+       x="0"
+       y="0">UP</tspan></text>
+</svg>
