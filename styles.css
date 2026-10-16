@@ -686,6 +686,29 @@ footer .strap-footer::before {
 }
 
 @media (max-width: 878px) {
+    /* ************************************** */
+    /*               INTRO GRID               */
+    /* ************************************** */
+    .home-section .content .intro .grid {
+        padding-top: 3%;
+        padding-right: 2%;
+    }
+
+    .intro .grid a {
+        max-height: 100px;
+    }
+
+    .intro .grid a img#ks-logo {
+        justify-self: center;
+    }
+
+    .intro .grid img#info-tag {     
+        justify-self: left;
+    }
+
+    /* ************************************** */
+    /* ************************************** */
+
     .content .sign-up {
         width: 90%;
         margin: 0 auto 0 3%;
@@ -727,28 +750,6 @@ footer .strap-footer::before {
         hyphens: none;
     }
 
-    /* ************************************** */
-    /*               INTRO GRID               */
-    /* ************************************** */
-    .home-section .content .intro .grid {
-        padding-top: 3%;
-        padding-right: 2%;
-    }
-
-    .intro .grid a {
-        max-height: 100px;
-    }
-
-    .intro .grid a img#ks-logo {
-        justify-self: center;
-    }
-
-    .intro .grid img#info-tag {     
-        justify-self: left;
-    }
-
-    /* ************************************** */
-    /* ************************************** */
 
     footer {
         border-bottom: 2px solid #6a3629;
