@@ -44,3 +44,23 @@ function ml_webform_success_25269214() {
     $('.ml-subscribe-form-25269214 .row-success').show();
     $('.ml-subscribe-form-25269214 .row-form').hide();
   }
+
+
+// Home Card Display
+// Checks that they're actually looking at the section
+const grid = document.querySelector('.card-grid');
+
+if (grid && 'IntersectionObserver' in window) {
+  grid.classList.add('will-animate');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        grid.classList.add('in-view');
+        observer.unobserve(grid);
+      }
+    });
+  }, { threshold: 0.35 });
+
+  observer.observe(grid);
+}

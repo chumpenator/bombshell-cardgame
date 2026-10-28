@@ -31,12 +31,10 @@
 @keyframes slideFromRight {
     0% {
         opacity: 0;
-        /* Start with extra offset, keeping your rotation, scale, and vertical shift */
         transform: rotate(10deg) translateX(80px) translateY(10px) scale(1.15); 
     }
     100% {
         opacity: 1;
-        /* Lands at your exact final transform */
         transform: rotate(10deg) translateX(20px) translateY(10px) scale(1.15); 
     }
 }
@@ -44,13 +42,14 @@
 @keyframes slideUp {
     0% {
         opacity: 0;
-        transform: translateX(-10px) translateY(40px); /* Starts 40px lower */
+        transform: translateX(-10px) translateY(40px); /* Start 40px lower */
     }
     100% {
         opacity: 1;
-        transform: translateX(-10px) translateY(0); /* Lands at its home position */
+        transform: translateX(-10px) translateY(0); /* Lands at home position */
     }
 }
+
 
 /* ************************************** */
 /* ************************************** */
@@ -320,7 +319,7 @@ section {
     display: flex;
     flex-direction: column;
     display: inline-block;
-    margin-top: 70px;
+    margin-top: 40px;
     max-width: 900px;
 }
 
@@ -415,6 +414,8 @@ section {
     grid-row: 1;
     z-index: 2;
 
+    width: 70%;
+
     justify-self: center;
 
     animation: slideUp 0.8s ease-out both;
@@ -428,10 +429,7 @@ section {
     transform: rotate(10deg) translateX(20px) translateY(10px) scale(1.15);
     justify-self: center;
 
-    /* Animation settings (takes 0.8s, with a slight 0.2s delay so it follows the logo) */
     animation: slideFromRight 0.6s ease-out 0.2s both;
-    /* Note: Set the initial transform here so it doesn't flash before animating */
-    /* transform: rotate(10deg) translateX(20px) translateY(10px) scale(1.15); */
 }
 
 /* 
@@ -520,19 +518,66 @@ section {
 /* ************************************** */
 /*                 CARDS                  */
 /* ************************************** */
-.cards {
-    display: flex;
-    flex-direction: column;
+.home-section .content .cards .card-grid {
+  --count: 5;
+  --card-w: 0.24;       /* card width as a fraction of the grid width */
+  --max-angle: 8deg;
+  --arc: 1.5rem;
+
+  /* distance between card left edges, so the hand spans the full width */
+  --step: calc((1 - var(--card-w)) / (var(--count) - 1));
+
+  display: grid;
+  grid-template-columns: repeat(var(--count), calc(100% * var(--step)));
+  justify-content: start;
+  align-items: end;
+  gap: 0;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding-block: var(--arc) 1rem;
+  padding-top: 7px;
 }
 
-/* .cards p {
-    hyphens: auto;
+.home-section .content .cards .card-grid img {
+  /* -1 at the far left card, 0 at center, +1 at the far right */
+  --t: calc((var(--i) - (var(--count) - 1) / 2) / ((var(--count) - 1) / 2));
+
+  /* card width -- the bigger/wider the card the more it overlaps */
+  width: calc(100% * var(--card-w) / var(--step));
+  max-width: none;
+  height: auto;
+  margin: 0;
+
+  transform-origin: 50% 100%;
+  transform:
+    translateY(calc(var(--t) * var(--t) * var(--arc)))
+    rotate(calc(var(--t) * var(--max-angle)));
+
+  --delay: calc((var(--count) - 1 - var(--i)) * 0.15s);
+
+  transition:
+    transform 0.2s ease,                       /* hover lift, no delay */
+    translate 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) var(--delay),
+    opacity 0.5s ease var(--delay);
+}
+
+.home-section .content .cards .card-grid.will-animate:not(.in-view) img {
+  translate: -100vw 0;
+  opacity: 0;
+}
+
+/* .home-section .content .cards .card-grid img:hover {
+  transform:
+    translateY(calc(var(--t) * var(--t) * var(--arc) - 1rem))
+    rotate(calc(var(--t) * var(--max-angle)));
+  z-index: 10;
 } */
 
-.cards img#card-display {
-    margin: 0 auto;
-    width: 80%;
-}
+.card-grid img:nth-child(1) { --i: 0; }
+.card-grid img:nth-child(2) { --i: 1; }
+.card-grid img:nth-child(3) { --i: 2; }
+.card-grid img:nth-child(4) { --i: 3; }
+.card-grid img:nth-child(5) { --i: 4; }
 
 
 /* ************************************** */
@@ -656,13 +701,31 @@ footer .strap-footer::before {
 /*                MOBILE                  */
 /* ************************************** */
 @media (max-width: 1120px) {
-    .home-section .content p {
+    /* .home-section .content p {
         font-size: 35px;
-    }
+    } */
 
     .home-section .content .intro p {
-        margin-top: 25px;
+        margin-top: 0;
         margin-bottom: 0;
+    }
+
+    .intro .grid a img#ks-logo {
+        justify-self: right;
+    }
+
+    .intro .grid img#game-display {
+        width: 100%;
+    }
+
+    .intro .grid img#info-tag {     
+        justify-self: left;
+    }
+
+    .home-section .content .cards .card-grid {
+        --card-w: 0.3;
+        --arc: 0.5rem;
+        max-width: 75%;
     }
 
     .footer-div {
@@ -686,6 +749,10 @@ footer .strap-footer::before {
 }
 
 @media (max-width: 878px) {
+    .home-section .content .intro p {
+        margin-top: 2%;
+    }
+
     /* ************************************** */
     /*               INTRO GRID               */
     /* ************************************** */
@@ -698,12 +765,14 @@ footer .strap-footer::before {
         max-height: 100px;
     }
 
-    .intro .grid a img#ks-logo {
-        justify-self: center;
-    }
-
     .intro .grid img#info-tag {     
         justify-self: left;
+    }
+
+    .home-section .content .cards .card-grid {
+        --card-w: 0.3;
+        --arc: 1.1rem;
+        max-width: 80%;
     }
 
     /* ************************************** */
@@ -741,6 +810,10 @@ footer .strap-footer::before {
         font-size: 24px;
     }
 
+    .intro .grid img#game-display {
+        width: 75%;
+    }
+
     .content .sign-up {
         width: 90%;
         margin: 0 auto 0 3%;
@@ -748,6 +821,12 @@ footer .strap-footer::before {
 
     .content .cards p {
         hyphens: none;
+    }
+
+    .home-section .content .cards .card-grid {
+        --card-w: 0.3;
+        --arc: .65rem;
+        max-width: 80%;
     }
 
 
