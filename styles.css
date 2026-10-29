@@ -635,7 +635,6 @@ footer .strap-footer::before {
 .footer-div {
     display: flex;
     justify-content: space-evenly;
-    /* width: 20%; */
     margin-top: 15px;
 }
 
@@ -665,12 +664,11 @@ footer .strap-footer::before {
     padding: 9px 18px;
 }
 
-.signup-tag img {
-    height: auto;
-    width: 150px;
-    rotate: -20deg;
-    z-index: 2;
+.footer-div .sm-icon#lt {
+    display: none;
 }
+
+
 
 /* BUTTON */
 /* 
@@ -799,7 +797,7 @@ footer .strap-footer::before {
 @media (max-width: 768px) {
     .home-section .content {
         padding: 0;
-        margin-top: 100px; /* keeps from scooting up */
+        margin-top: 30%; /* keeps from scooting up */
     }
 
     .content .intro p {
@@ -836,6 +834,7 @@ footer .strap-footer::before {
 
     .footer-div {
         margin-top: 7px;
+        justify-content: center;
         width: 100%;
     }
 
@@ -848,8 +847,16 @@ footer .strap-footer::before {
         box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
     }
 
+    /* Hide socials & show linktree */
+    .footer-div .sm-icon#fb, .sm-icon#ig, .sm-icon#yt, .sm-icon#tt {
+        display: none;
+    }
+    .footer-div .sm-icon#lt {
+        display: block;
+    }
+
     .footer-div .sm-icon img {
-        width: 20px;
+        width: 24px;
         padding: 5px 9px;
     }
 
